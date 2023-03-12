@@ -27,7 +27,9 @@ export const blogsRepository = {
             id:'' + (+(new Date())),
             name: blog.name,
             description: blog.description,
-            websiteUrl: blog.websiteUrl
+            websiteUrl: blog.websiteUrl,
+            createdAt: new Date().toISOString(),
+            isMembership: true
         }
         bdBlogs.push(newBlog)
         return newBlog;

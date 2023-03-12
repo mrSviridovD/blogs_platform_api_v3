@@ -33,7 +33,8 @@ export const postsRepository = {
             shortDescription: post.shortDescription,
             content: post.content,
             blogId: foundIdBlog.id,
-            blogName: foundIdBlog.name
+            blogName: foundIdBlog.name,
+            createdAt: (new Date()).toISOString()
         }
         bdPosts.push(newPost);
         return newPost;
